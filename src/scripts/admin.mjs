@@ -220,9 +220,9 @@ export function setupAdmin(root, client) {
   /* ---------- Partner pages (same template for every partner, content differs) ---------- */
   const PAGE_STATUS = { draft: 'Draft', review: 'In review', preview: 'Preview', live: 'Live', suspended: 'Suspended', retired: 'Retired' };
   const PAGE_NEXT = {
-    preview: { to: 'live', label: 'Go live', confirm: 'Confirm go live', done: 'Page approved to go live. It appears after the next site build.' },
-    live: { to: 'suspended', label: 'Suspend page', confirm: 'Confirm suspend', done: 'Page suspended. It is removed on the next site build.' },
-    suspended: { to: 'live', label: 'Restore page', confirm: 'Confirm restore', done: 'Page restored. It returns on the next site build.' },
+    preview: { to: 'live', label: 'Go live', confirm: 'Confirm go live', done: 'Page is going live. It appears on the site in about 2 minutes.' },
+    live: { to: 'suspended', label: 'Suspend page', confirm: 'Confirm suspend', done: 'Page suspended. It is removed from the site in about 2 minutes.' },
+    suspended: { to: 'live', label: 'Restore page', confirm: 'Confirm restore', done: 'Page restored. It returns to the site in about 2 minutes.' },
   };
 
   function partnerControls(row) {
